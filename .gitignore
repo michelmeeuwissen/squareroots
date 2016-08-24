@@ -1,0 +1,17 @@
+### Maven template
+target/
+.mvn
+/mvnw.cmd
+/mvnw
+
+# Package Files #
+*.jar
+
+#IDEA
+.idea
+square-roots.iml
+
+#CF
+manifest.yml
+
+

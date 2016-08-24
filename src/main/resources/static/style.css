@@ -1,0 +1,35 @@
+body, #inputField, body div div div div div.demo-dialog-button.layout-row button{
+    color: white; !important;
+}
+
+body md-input-container.md-squareRoots-theme.md-input-invalid label,
+body md-input-container.md-squareRoots-theme label,
+body md-input-container.md-squareRoots-theme ._md-placeholder,
+body .md-button.md-squareRoots-theme.md-primary
+{
+    color: white; !important;
+}
+
+p {
+    text-align: center;
+}
+
+
+.background {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.layer {
+    background-color: rgba(130, 90, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

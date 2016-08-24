@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Square Roots- Let the Muppets do the work</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+
+<script src="script.js"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body ng-app="app" md-theme="squareRoots">
+<div class="background">
+    <div class="layer">
+        <div ng-controller="squareRootCtrl">
+
+            <div role="dialog" aria-label="Do the Roots" layout="column" layout-align="center center">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Square Roots!</h2>
+                    </div>
+                </md-toolbar>
+
+                <div>
+                    <p>
+                        let's do the math
+                    </p>
+                    <div layout="row" class="md-display-4">
+                        &radic;<span style="text-decoration: overline">{{inputValue}}</span>
+                    </div>
+                </div>
+
+                <md-input-container>
+                    <form ng-submit="doCalc()">
+                        <label>Input</label>
+                        <input type="text" ng-model="inputValue" ng-keydown="onKeyPress($event)" required md-maxlength="20" id="inputField">
+                    </form>
+                </md-input-container>
+
+                <div layout="row" class="demo-dialog-button">
+                    <md-button md-autofocus class="md-primary" id="calcBtn" data-ng-click="doCalc()">
+                        Calc
+                    </md-button>
+                </div>
+
+                <div data-ng-show="outputValue" md-colors="{background: 'orange-800'}"
+                     class="line layout-row layout-align-space-between-stretch">
+                    <div class="md-toolbar-tools">
+                        <h2 id="outputField">{{ outputValue }}</h2>
+                    </div>
+                </div>
+
+                <div data-ng-show="wrongInput" md-colors="{background: 'red-600'}"
+                     class="line layout-row layout-align-space-between-stretch">
+                    <div class="md-toolbar-tools">
+                        <h2>Oops...  We can't do any Square Roots on this input</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
