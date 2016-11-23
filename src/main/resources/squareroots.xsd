@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://github.com/robotframework/webservice"
+           targetNamespace="http://github.com/robotframework/webservice" elementFormDefault="qualified">
+
+    <xs:element name="squareRootRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="input" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="squareRootResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="output" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

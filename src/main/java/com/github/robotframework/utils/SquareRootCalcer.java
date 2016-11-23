@@ -1,4 +1,4 @@
-package com.github.robotframework;
+package com.github.robotframework.utils;
 
 
 public class SquareRootCalcer {
